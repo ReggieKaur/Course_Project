@@ -19,9 +19,12 @@
 <div id="map"></div>
 <script>
 	var map;
-	var parks = [
-		{"park":"Yellowstone","coords":[44.4280,-110.5885]},
-		{"park":"Glacier","coords":[48.7596, -113.7870]}
+	var aboutme = [
+		{"Place":"Hyderabad","coords":[17.385044,78.486671]},
+		{"Place":"Chandigarh","coords":[30.733315, 76.779419]},
+        {"Place":"Toronto","coords":[49.630238, -98.698262]},
+        {"Place":"Banglore","coords":[12.970952, 77.60391]},
+        {"Place":"Vancouver","coords":[49.263566, -123.138572]}
 		];
 
 	function initMap() {
@@ -31,7 +34,7 @@
 			mapTypeId: 'terrain'
 		});
 
-		mashParks(parks);
+		mashParks(aboutme);
 	}
 
 	function mashParks(results) {
@@ -41,7 +44,7 @@
 		var marker = new google.maps.Marker({
 			position: latLng,
 			map: map,
-			label:results[i].park
+			label:results[i].Place
 			});
 		}
 	}
@@ -50,7 +53,7 @@
 
 </script>
 <script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTM5RKrtCLpZAj5HU3K3cTvFNB240NsBg&callback=initMap">
+		src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAWlwDB_FY_ZzpZ1TnyvGsIrGmjr6XODN0">
 </script>
 </body>
 </html>
